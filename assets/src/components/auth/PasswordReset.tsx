@@ -55,11 +55,11 @@ class PasswordReset extends React.Component<Props, State> {
     const {password, passwordConfirmation} = this.state;
 
     if (!password) {
-      return 'Password is required';
+      return '请输入密码';
     } else if (password.length < 8) {
-      return 'Password must be at least 8 characters';
+      return '密码须为8位';
     } else if (password !== passwordConfirmation) {
-      return 'Password confirmation does not match';
+      return '两次输入密码不一致';
     } else {
       return null;
     }
@@ -97,8 +97,7 @@ class PasswordReset extends React.Component<Props, State> {
         logger.error('Error!', err);
         // TODO: provide more granular error messages?
         const error =
-          err.response?.body?.error?.message ||
-          'Something went wrong! Try again in a few minutes.';
+          err.response?.body?.error?.message || '出了点问题! 几分钟后再试吧。';
 
         this.setState({error, loading: false});
       });
@@ -122,7 +121,7 @@ class PasswordReset extends React.Component<Props, State> {
 
           <form onSubmit={this.handleSubmit}>
             <Box mb={2}>
-              <label htmlFor="password">New password</label>
+              <label htmlFor="password">新密码</label>
               <Input
                 id="password"
                 size="large"
@@ -135,7 +134,7 @@ class PasswordReset extends React.Component<Props, State> {
             </Box>
 
             <Box mb={2}>
-              <label htmlFor="confirm_password">Confirm new password</label>
+              <label htmlFor="confirm_password">确认密码</label>
               <Input
                 id="confirm_password"
                 size="large"
@@ -166,7 +165,7 @@ class PasswordReset extends React.Component<Props, State> {
             )}
 
             <Box mt={error ? 3 : 4}>
-              Back to <Link to="/login">login</Link>.
+              回到 <Link to="/login">登录</Link>.
             </Box>
           </form>
         </Box>

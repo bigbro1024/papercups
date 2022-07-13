@@ -42,3 +42,4 @@ chat_api-*.tar
 fly.toml
 
 **/node_modules
+docker

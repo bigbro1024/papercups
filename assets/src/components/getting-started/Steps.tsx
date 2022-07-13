@@ -43,58 +43,50 @@ const getStepsMetadata = (
     {
       completed: onboardingStatus.has_configured_inbox,
       ctaHref: `/inboxes/${inboxId}`,
-      ctaText: 'Configure your inbox',
+      ctaText: '配置您的收件箱',
       text: (
         <>
-          <Text strong>Configure your inbox</Text> to start receiving messages
-          via <Link to={`/inboxes/${inboxId}/chat-widget`}>live chat</Link> and
-          many other channels.
+          <Text strong>配置您的收件箱</Text> 开始通过以下方式接收信息{' '}
+          <Link to={`/inboxes/${inboxId}/chat-widget`}>实时聊天</Link>{' '}
+          和其他渠道.
         </>
       ),
     },
     {
       completed: onboardingStatus.has_configured_profile,
       ctaHref: '/settings/profile',
-      ctaText: 'Set up profile',
+      ctaText: '设置资料',
       text: (
         <>
-          <Text strong>Set up your profile</Text> to personalize the experience
-          with your customers.
+          <Text strong>设置你的个人资料</Text> 使你的客户有个性化的体验。
         </>
       ),
     },
     {
       completed: onboardingStatus.has_invited_teammates,
       ctaHref: '/settings/team',
-      ctaText: 'Invite teammates',
+      ctaText: '邀请团队成员',
       text: (
         <>
-          <Text strong>Invite your teammates</Text> to join you in connecting
-          with and supporting your customers.
+          <Text strong>邀请你的团队成员</Text> 与你的客户建立联系并提供支持。
         </>
       ),
     },
     {
       completed: onboardingStatus.has_integrations,
       ctaHref: '/integrations',
-      ctaText: 'Add integrations',
+      ctaText: '添加集成',
       text: (
         <>
-          <Text strong>Connect more integrations</Text> to make the most of
-          Papercups.
+          <Text strong>连接更多的集成</Text> 以充分利用 Papercups。
         </>
       ),
     },
     {
       completed: onboardingStatus.has_upgraded_subscription,
       ctaHref: '/settings/billing',
-      ctaText: 'Upgrade subscription',
-      text: (
-        <>
-          <Text strong>Upgrade your subscription</Text> for access to even more
-          features!
-        </>
-      ),
+      ctaText: '账户设置',
+      text: <>配置工作时间、对话提醒、团队信息等。</>,
     },
   ];
 };

@@ -75,15 +75,15 @@ class Register extends React.Component<Props, State> {
     } = this.state;
 
     if (!companyName && !inviteToken) {
-      return 'Company name is required';
+      return '请输入团队名';
     } else if (!email) {
       return 'Email is required';
     } else if (!password) {
-      return 'Password is required';
+      return '请输入密码';
     } else if (password.length < 8) {
-      return 'Password must be at least 8 characters';
+      return '密码须为8位';
     } else if (password !== passwordConfirmation) {
-      return 'Password confirmation does not match';
+      return '两次输入密码不一致';
     } else {
       return null;
     }
@@ -160,11 +160,11 @@ class Register extends React.Component<Props, State> {
         }}
       >
         <Box sx={{width: '100%', maxWidth: 320}}>
-          <Title level={1}>Get started</Title>
+          <Title level={1}>注册</Title>
           <form onSubmit={this.handleSubmit}>
             {!inviteToken && (
               <Box mb={2}>
-                <label htmlFor="companyName">Company Name</label>
+                <label htmlFor="companyName">团队</label>
                 <Input
                   id="companyName"
                   size="large"
@@ -178,7 +178,7 @@ class Register extends React.Component<Props, State> {
             )}
 
             <Box mb={2}>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">邮箱</label>
               <Input
                 id="email"
                 size="large"
@@ -191,7 +191,7 @@ class Register extends React.Component<Props, State> {
             </Box>
 
             <Box mb={2}>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">密码</label>
               <Input
                 id="password"
                 size="large"
@@ -204,7 +204,7 @@ class Register extends React.Component<Props, State> {
             </Box>
 
             <Box mb={2}>
-              <label htmlFor="confirm_password">Confirm password</label>
+              <label htmlFor="confirm_password">确认密码</label>
               <Input
                 id="confirm_password"
                 size="large"
@@ -224,7 +224,7 @@ class Register extends React.Component<Props, State> {
                 htmlType="submit"
                 loading={loading}
               >
-                Register
+                注册
               </Button>
             </Box>
 
@@ -235,8 +235,7 @@ class Register extends React.Component<Props, State> {
             )}
 
             <Box mt={error ? 3 : 4}>
-              Already have an account?{' '}
-              <Link to={`/login${location.search}`}>Log in!</Link>
+              已有账号? <Link to={`/login${location.search}`}>登录</Link>
             </Box>
           </form>
         </Box>

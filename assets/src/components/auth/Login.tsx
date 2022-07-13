@@ -74,11 +74,11 @@ class Login extends React.Component<Props, State> {
         }}
       >
         <Box sx={{width: '100%', maxWidth: 320}}>
-          <Title level={1}>Welcome back</Title>
+          <Title level={1}>欢迎回来</Title>
 
           <form onSubmit={this.handleSubmit}>
             <Box mb={2}>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">邮箱</label>
               <Input
                 id="email"
                 size="large"
@@ -90,7 +90,7 @@ class Login extends React.Component<Props, State> {
             </Box>
 
             <Box mb={2}>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">密码</label>
               <Input
                 id="password"
                 size="large"
@@ -109,7 +109,7 @@ class Login extends React.Component<Props, State> {
                 htmlType="submit"
                 loading={loading}
               >
-                Log in
+                登录
               </Button>
             </Box>
 
@@ -120,11 +120,10 @@ class Login extends React.Component<Props, State> {
             )}
 
             <Box mt={error ? 3 : 4}>
-              Don't have an account?{' '}
-              <Link to={`/register${location.search}`}>Sign up!</Link>
+              没有账号? <Link to={`/register${location.search}`}>注册!</Link>
             </Box>
             <Box my={3}>
-              <Link to="/reset-password">Forgot your password?</Link>
+              <Link to="/reset-password">忘记密码?</Link>
             </Box>
           </form>
         </Box>

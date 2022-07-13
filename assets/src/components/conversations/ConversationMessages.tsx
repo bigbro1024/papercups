@@ -15,7 +15,7 @@ const EmptyMessagesPlaceholder = () => {
     <Box my={4}>
       <Result
         status="success"
-        title="No messages"
+        title="没有消息"
         subTitle="Nothing to show here! Take a well-earned break 😊"
       />
     </Box>

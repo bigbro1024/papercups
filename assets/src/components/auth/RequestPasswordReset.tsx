@@ -42,7 +42,7 @@ class RequestPasswordReset extends React.Component<Props, State> {
           this.props.history.push('/reset-password-requested');
         } else {
           this.setState({
-            error: 'Something went wrong! Try again in a few minutes.',
+            error: '出了点问题! 几分钟后再试吧。',
             loading: false,
           });
         }
@@ -50,8 +50,7 @@ class RequestPasswordReset extends React.Component<Props, State> {
       .catch((err) => {
         logger.error('Error!', err);
         const error =
-          err.response?.body?.error?.message ||
-          'Something went wrong! Try again in a few minutes.';
+          err.response?.body?.error?.message || '出了点问题! 几分钟后再试吧。';
 
         this.setState({error, loading: false});
       });

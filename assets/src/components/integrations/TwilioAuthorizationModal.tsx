@@ -110,7 +110,7 @@ const TwilioAuthorizationModal = ({
       <Box>
         <Paragraph>
           <Text type="secondary">
-            Please provide your Twilio API credentials to get started.
+            Please provide your Twilio API credentials to 开始.
           </Text>
         </Paragraph>
         <Paragraph>

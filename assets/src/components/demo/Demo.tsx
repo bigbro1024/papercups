@@ -180,7 +180,7 @@ class Demo extends React.Component<Props, State> {
 
         <Flex mb={4} sx={{alignItems: 'center'}}>
           <Box mr={3}>
-            <Text strong>Ready to get started?</Text>
+            <Text strong>Ready to 开始?</Text>
           </Box>
           <Link to="/register">
             <Button type="primary" icon={<RightCircleOutlined />}>

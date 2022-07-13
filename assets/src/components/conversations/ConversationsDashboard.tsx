@@ -44,7 +44,7 @@ const EmptyMessagesPlaceholder = () => {
     <Box my={4}>
       <Result
         status="success"
-        title="No messages"
+        title="没有消息"
         subTitle="Nothing to show here! Take a well-earned break 😊"
       />
     </Box>
@@ -59,15 +59,15 @@ const GettingStartedRedirect = ({inbox}: {inbox?: Inbox | null}) => {
       </Link>
     ) : (
       <Link to="/getting-started">
-        <Button type="primary">Get started</Button>
+        <Button type="primary">开始</Button>
       </Link>
     );
 
   return (
     <Box my={4}>
       <Result
-        title="No messages"
-        subTitle="It looks like no channels have been set up yet!"
+        title="没有消息"
+        subTitle="看起来还没有建立任何对话!"
         extra={extra}
       />
     </Box>
@@ -575,7 +575,7 @@ export const ConversationsDashboard = ({
           <Box px="1px">
             <Input.Search
               className="ConversationsSearchInput"
-              placeholder="Search messages..."
+              placeholder="搜索消息 ..."
               disabled={status === 'loading'}
               loading={status === 'searching'}
               allowClear
@@ -687,7 +687,7 @@ const Wrapper = (
     switch (bucket) {
       case 'all':
         return {
-          title: 'All conversations',
+          title: '所有对话',
           filter: {status: 'open'},
           isValidConversation: (conversation) => {
             const {status, archived_at, closed_at} = conversation;

@@ -302,9 +302,9 @@ const Dashboard = (props: RouteComponentProps) => {
                 <Menu.Item
                   key="getting-started"
                   icon={<GlobalOutlined />}
-                  title="Getting started"
+                  title="开始"
                 >
-                  <Link to="/getting-started">Getting started</Link>
+                  <Link to="/getting-started">开始</Link>
                 </Menu.Item>
               )}
 
@@ -312,18 +312,18 @@ const Dashboard = (props: RouteComponentProps) => {
                 danger={shouldHighlightInbox}
                 key="conversations"
                 icon={<MailOutlined />}
-                title={`Inbox (${totalNumUnread})`}
+                title={`收件箱 (${totalNumUnread})`}
               >
-                <Link to="/conversations/all">Inbox ({totalNumUnread})</Link>
+                <Link to="/conversations/all">收件箱 ({totalNumUnread})</Link>
               </Menu.Item>
 
               {isAdminUser && (
                 <Menu.Item
-                  title="Integrations"
+                  title="集成"
                   icon={<ApiOutlined />}
                   key="integrations"
                 >
-                  <Link to="/integrations">Integrations</Link>
+                  <Link to="/integrations">集成</Link>
                 </Menu.Item>
               )}
 
@@ -333,46 +333,44 @@ const Dashboard = (props: RouteComponentProps) => {
                 title="Customers"
               >
                 <Menu.Item key="people">
-                  <Link to="/customers">People</Link>
+                  <Link to="/customers">客户</Link>
                 </Menu.Item>
                 <Menu.Item key="companies">
-                  <Link to="/companies">Companies</Link>
+                  <Link to="/companies">团队</Link>
                 </Menu.Item>
                 <Menu.Item key="tags">
-                  <Link to="/tags">Tags</Link>
+                  <Link to="/tags">标签</Link>
                 </Menu.Item>
                 <Menu.Item key="issues">
-                  <Link to="/issues">Issues</Link>
+                  <Link to="/issues">议题/待办</Link>
                 </Menu.Item>
                 <Menu.Item key="notes">
-                  <Link to="/notes">Notes</Link>
+                  <Link to="/notes">备注</Link>
                 </Menu.Item>
               </Menu.SubMenu>
 
               <Menu.Item
-                title="Reporting"
+                title="报表"
                 icon={<LineChartOutlined />}
                 key="reporting"
               >
-                <Link to="/reporting">Reporting</Link>
+                <Link to="/reporting">报表</Link>
               </Menu.Item>
 
               {isAdminUser && (
                 <Menu.SubMenu
                   key="developers"
                   icon={<CodeOutlined />}
-                  title="Developers"
+                  title="开发者"
                 >
                   <Menu.Item key="personal-api-keys">
                     <Link to="/developers/personal-api-keys">API keys</Link>
                   </Menu.Item>
                   <Menu.Item key="event-subscriptions">
-                    <Link to="/developers/event-subscriptions">
-                      Event subscriptions
-                    </Link>
+                    <Link to="/developers/event-subscriptions">事件订阅</Link>
                   </Menu.Item>
                   <Menu.Item key="functions">
-                    <Link to="/functions">Functions</Link>
+                    <Link to="/functions">函数</Link>
                   </Menu.Item>
                 </Menu.SubMenu>
               )}
@@ -381,13 +379,13 @@ const Dashboard = (props: RouteComponentProps) => {
                 <Menu.SubMenu
                   key="sessions"
                   icon={<VideoCameraOutlined />}
-                  title="Sessions"
+                  title="会话"
                 >
                   <Menu.Item key="list">
-                    <Link to="/sessions/list">Live sessions</Link>
+                    <Link to="/sessions/list">在线会话</Link>
                   </Menu.Item>
                   <Menu.Item key="setup">
-                    <Link to="/sessions/setup">Set up Storytime</Link>
+                    <Link to="/sessions/setup">配置会话</Link>
                   </Menu.Item>
                 </Menu.SubMenu>
               )}
@@ -396,22 +394,22 @@ const Dashboard = (props: RouteComponentProps) => {
                 <Menu.SubMenu
                   key="settings"
                   icon={<SettingOutlined />}
-                  title="Settings"
+                  title="设置"
                 >
                   <Menu.Item key="account">
-                    <Link to="/settings/account">Account</Link>
+                    <Link to="/settings/account">账户设置</Link>
                   </Menu.Item>
                   <Menu.Item key="team">
-                    <Link to="/settings/team">My team</Link>
+                    <Link to="/settings/team">我的团队</Link>
                   </Menu.Item>
                   <Menu.Item key="profile">
-                    <Link to="/settings/profile">My profile</Link>
+                    <Link to="/settings/profile">个人资料</Link>
                   </Menu.Item>
-                  <Menu.Item key="inboxes" title="Inboxes">
-                    <Link to="/inboxes">Inboxes</Link>
+                  <Menu.Item key="inboxes" title="收件箱">
+                    <Link to="/inboxes">收件箱</Link>
                   </Menu.Item>
                   <Menu.Item key="saved-replies">
-                    <Link to="/settings/saved-replies">Saved replies</Link>
+                    <Link to="/settings/saved-replies">快捷回复</Link>
                   </Menu.Item>
                   {shouldDisplayBilling && (
                     <Menu.Item key="billing">
@@ -423,13 +421,13 @@ const Dashboard = (props: RouteComponentProps) => {
                 <Menu.SubMenu
                   key="settings"
                   icon={<SettingOutlined />}
-                  title="Settings"
+                  title="设置"
                 >
                   <Menu.Item key="profile">
-                    <Link to="/settings/profile">My profile</Link>
+                    <Link to="/settings/profile">个人资料</Link>
                   </Menu.Item>
                   <Menu.Item key="saved-replies">
-                    <Link to="/settings/saved-replies">Saved replies</Link>
+                    <Link to="/settings/saved-replies">快捷回复</Link>
                   </Menu.Item>
                 </Menu.SubMenu>
               )}
@@ -449,12 +447,12 @@ const Dashboard = (props: RouteComponentProps) => {
                 </Menu.Item>
               )}
               <Menu.Item
-                title="Log out"
+                title="退出登录"
                 icon={<LogoutOutlined />}
                 key="logout"
                 onClick={logout}
               >
-                Log out
+                退出登录
               </Menu.Item>
             </Menu>
           </Box>

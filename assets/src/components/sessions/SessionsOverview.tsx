@@ -151,8 +151,8 @@ class SessionsOverview extends React.Component<Props, State> {
                 message={
                   <Text>
                     It looks like you haven't set up Storytime yet &mdash;{' '}
-                    <Link to="/sessions/setup">click here</Link> to get started
-                    with live sessions!
+                    <Link to="/sessions/setup">click here</Link> to 开始 with
+                    live sessions!
                   </Text>
                 }
                 type="warning"
@@ -170,7 +170,7 @@ class SessionsOverview extends React.Component<Props, State> {
                     >
                       let us know
                     </Button>{' '}
-                    if you need any help getting started!
+                    if you need any help 开始!
                   </Text>
                 }
                 type="info"

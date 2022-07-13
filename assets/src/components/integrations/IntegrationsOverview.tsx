@@ -534,7 +534,7 @@ class IntegrationsOverview extends React.Component<Props, State> {
                       <Text>
                         Most integration channels are now handled at the inbox
                         level. <Link to="/inboxes">Click here</Link> to
-                        configure your inboxes.
+                        配置您的收件箱es.
                       </Text>
                     }
                     type="info"
